@@ -126,6 +126,7 @@ app.get('/api/checklist/:id', async (req, res) => {
   res.status(200).json(data.content);
 });
 
-app.listen(port, () => {
-  console.log(`Backend server listening at http://localhost:${port}`);
+app.listen(port, '0.0.0.0', () => {
+  console.log(`🚀 Backend server listening on 0.0.0.0:${port}`);
+  console.log(`🌐 Public URL: https://portcall-ai-backend-production.up.railway.app`);
 });
