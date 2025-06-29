@@ -4,6 +4,14 @@ const cors = require('cors');
 const supabase = require('./supabaseClient');
 const { generateChecklist } = require('./aiOrchestrator-v2');
 
+// Debug environment variables
+console.log('🔍 Environment Check:');
+console.log('SUPABASE_URL:', process.env.SUPABASE_URL ? 'SET' : 'MISSING');
+console.log('SUPABASE_ANON_KEY:', process.env.SUPABASE_ANON_KEY ? 'SET' : 'MISSING');
+console.log('PERPLEXITY_API_KEY:', process.env.PERPLEXITY_API_KEY ? 'SET' : 'MISSING');
+console.log('OPENAI_API_KEY:', process.env.OPENAI_API_KEY ? 'SET' : 'MISSING');
+console.log('PORT:', process.env.PORT || 'NOT SET (using 3001)');
+
 const app = express();
 const port = process.env.PORT || 3001;
 
