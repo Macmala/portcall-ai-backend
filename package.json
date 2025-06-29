@@ -4,7 +4,8 @@
   "description": "Backend server for PortCall AI",
   "main": "index.js",
   "scripts": {
-    "start": "node index.js"
+    "start": "node index-minimal.js",
+    "start-full": "node index.js"
   },
   "dependencies": {
     "@supabase/supabase-js": "^2.39.0",
